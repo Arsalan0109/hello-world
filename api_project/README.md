@@ -1,78 +1,60 @@
-# Recipe Manager
+# Cricket Team Manager
 
-Full stack recipe management app with CRUD operations, RESTful API, and data persistence.
+This web app is designed to manage players in a cricket team. You can add players, see their statistics, complete updates, and remove them from your team. 
 
-## Features
+This app allows you to track players in your cricket team. You can view each player's style of batting and bowling, number of matches played, runs scored, and wickets taken. You can filter by position such as batsman and bowler and view other statistics.
 
-- Create, read, update, and delete recipes
-- Store recipe details including ingredients, instructions, prep time, cook time, and servings
-- Categorize recipes by meal type
-- Filter recipes by category
-- Responsive design
-- Data persists to JSON file
+## How To Run
 
-## Tech Stack
-
-- Frontend: React
-- Backend: Node.js with Express
-- Storage: JSON file
-- Styling: CSS
-
-## Setup
-
-Install dependencies:
+First install everything:
 
 ```
 npm install
 ```
 
-## Running the App
+Then open two command windows.
 
-You need two terminals running at the same time.
-
-Terminal 1 - Start the backend server:
+In the first window, start the server:
 
 ```
 npm run server
 ```
 
-Terminal 2 - Start the React frontend:
+In the second window, start the app:
 
 ```
 npm start
 ```
 
-The frontend will open at http://localhost:3000 and connects to the backend at http://localhost:5000.
+The app will open in your browser at http://localhost:3000
 
-## API Endpoints
+## How To Use
 
-All endpoints use `/api/recipes` as the base path.
+To add a new player, please click on the Add Player button. You'll need to enter their name, age, and role. You can also specify their batting and bowling styles in addition to their stats.
 
-- GET `/api/recipes` - Get all recipes
-- GET `/api/recipes/:id` - Get single recipe
-- POST `/api/recipes` - Create new recipe
-- PUT `/api/recipes/:id` - Update recipe
-- DELETE `/api/recipes/:id` - Delete recipe
+You can click on any player card to access all of the player's details. You'll be able to edit their details or delete them there.
 
-## Data Storage
+You'll find filter buttons at the top of the players list. You can click these to filter for batsmen, bowlers, all-rounders, and wicket keepers.
 
-Recipes are stored in `data.json` in the root directory. The file is created automatically when you add your first recipe.
+## What's Inside
 
-## Usage
+The application is divided into two parts: the front end, which is created with React to show the player cards and forms, and the back end, which is built with Node.js and Express to save data to MongoDB.
 
-1. Click "Add Recipe" to create a new recipe
-2. Fill in the form with recipe details (name, ingredients, and instructions are required)
-3. Click on any recipe card to view full details
-4. Use Edit button to modify a recipe
-5. Use Delete button to remove a recipe
-6. Filter recipes by category using the filter buttons
+Data for all players is saved in MongoDB Atlas so it stays saved after the app is closed.
 
-## Project Structure
+## API Routes
 
-```
-src/
-  App.js - Main React component with all functionality
-  App.css - All styling
-server.js - Express API server
-data.json - Recipe storage
-```
+The server has these routes:
+
+- GET /api/players - Get all players
+- GET /api/players/:id - Get one player
+- POST /api/players - Add new player
+- PUT /api/players/:id - Update player
+- DELETE /api/players/:id - Delete player
+
+## Tech Used
+
+React for the frontend
+Node.js and Express for the backend
+MongoDB Atlas for the database
+Plain CSS for styling
