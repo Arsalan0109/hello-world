@@ -1,0 +1,2 @@
+SHA-256 hash of the Book of Mark:
+229b4771e08edf52f0c676c5d4788c0d3d46f04ab47675b3f89156289e88e234
